@@ -1,3 +1,8 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 #container {
     height: 100vh;
     display: grid;
@@ -10,6 +15,39 @@
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
+    display: grid;
+    grid-template-rows: 25px 300px 200px;
+    row-gap: 50px;
+}
+
+#page-name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#nav-links {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#help-links {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#sidebar p,
+#sidebar h1 {
+    color: white;
+    font-weight: bold;
+    text-align: start;
+}
+
+#sidebar h1 {
+    font-size: 32px;
+}
+
+#sidebar p {
+    font-size: 24px;
 }
 
 #menu-section {
