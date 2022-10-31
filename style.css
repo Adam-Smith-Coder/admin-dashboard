@@ -10,6 +10,7 @@ body {
     grid-template-rows: 1fr 7fr;
 }
 
+
 #sidebar {
     background-color: lightseagreen;
     grid-column-start: 1;
@@ -18,6 +19,7 @@ body {
     display: grid;
     grid-template-rows: 25px 300px 200px;
     row-gap: 50px;
+    padding-left: 10px;
 }
 
 #page-name {
@@ -48,13 +50,49 @@ body {
 
 #sidebar p {
     font-size: 24px;
+    
+}
+
+#sidebar img {
+    vertical-align: text-top;
 }
 
 #menu-section {
     background-color: lightcoral;
     grid-column-start: 2;
     grid-row-start: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+}
 
+#search-bar {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    height: 20px;
+    width: 47rem;
+    align-self: center;
+    justify-self: center;
+}
+
+#profile {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    font-size: 32px;
+}
+
+#user-details {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#content-buttons {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+#content-buttons button {
+    font-size: 24px;
 }
 
 #main-content {
