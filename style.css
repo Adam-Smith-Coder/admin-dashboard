@@ -78,12 +78,21 @@ body {
 #profile {
     grid-row-start: 1;
     grid-column-start: 2;
-    font-size: 32px;
+    font-size: 26px;
+    display: flex;
+    gap: 10px;
+}
+
+#profile img, #user-details img {
+    align-self: center;
 }
 
 #user-details {
     grid-row-start: 2;
     grid-column-start: 1;
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
 }
 
 #content-buttons {
@@ -100,7 +109,7 @@ body {
     grid-column-start: 2;
     grid-row-start: 2;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 #projects-section {
@@ -111,7 +120,40 @@ body {
     grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-#announcements {
-    grid-column-start: 3;
+#updates {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
+#announcements {
+    grid-row-start: 1;
+}
+
+#announce-content, #trending-content {
+    padding: 35px;
+    background-color: white;
+    width: 75%;
+    border-radius: 25px;
+}
+
+#p-head {
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#p-body {
+    font-size: 16px;
+    color: rgb(155, 144, 144);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#trending {
+    grid-row-start: 2;
+}
+
+#trending-content {
+    display: flex;
+}
