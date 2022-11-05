@@ -1,18 +1,19 @@
 body {
     padding: 0;
-    margin: 0;
+    margin: 0;  
+    font-family: 'Rokkitt', sans-serif;
 }
 
 #container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: 240px 7fr;
     grid-template-rows: 1fr 7fr;
 }
 
 
 #sidebar {
-    background-color: lightseagreen;
+    background-color: rgb(44, 118, 255);
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -58,12 +59,13 @@ body {
 }
 
 #menu-section {
-    background-color: lightcoral;
+    background-color: white;
     grid-column-start: 2;
     grid-row-start: 1;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
 #search-bar {
@@ -105,11 +107,11 @@ body {
 }
 
 #main-content {
-    background-color: lightslategray;
+    background-color: rgb(159, 189, 209);
     grid-column-start: 2;
     grid-row-start: 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 
 #projects-section {
@@ -133,8 +135,10 @@ body {
 #announce-content, #trending-content {
     padding: 35px;
     background-color: white;
-    width: 75%;
+    width: 60%;
     border-radius: 25px;
+    box-shadow: 3px 3px 3px rgb(175, 165, 165);
+    margin:auto;
 }
 
 #p-head {
@@ -154,6 +158,15 @@ body {
     grid-row-start: 2;
 }
 
-#trending-content {
-    display: flex;
+#trending-content p {
+    display: inline-block;
+    vertical-align: top;
+    margin-right:10px;
+    font-size: 18px;
+}
+
+button {
+    background-color: rgb(44, 118, 255);
+    border-radius: 25%;
+    color: white;
 }
