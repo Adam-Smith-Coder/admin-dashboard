@@ -1,14 +1,14 @@
-body {
+body { 
+    margin: 0;
     padding: 0;
-    margin: 0;  
     font-family: 'Rokkitt', sans-serif;
 }
 
 #container {
-    height: 100vh;
     display: grid;
     grid-template-columns: 240px 7fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-rows: 1fr 6fr;
+    max-height: 100vh;
 }
 
 
@@ -111,43 +111,84 @@ body {
     grid-column-start: 2;
     grid-row-start: 2;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 #projects-section {
     grid-column-start: 1;
     grid-column-end: 2;
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 0px 30px 30px 30px;
+}
+
+#projects-section h2 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#project-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    border-left: 10px solid orange;
+    box-shadow: 3px 3px 3px rgb(175, 165, 165);
+}
+
+#project-item>#p-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#project-item>#p-body {
+    font-size: 16px;
+    color: rgb(155, 144, 144);
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #updates {
     grid-column-start: 2;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80px 1fr 80px 300px;
+    max-height: 70%;
 }
 
-#announcements {
+#announcements{
     grid-row-start: 1;
 }
 
-#announce-content, #trending-content {
-    padding: 35px;
-    background-color: white;
-    width: 60%;
-    border-radius: 25px;
-    box-shadow: 3px 3px 3px rgb(175, 165, 165);
-    margin:auto;
+#announce-content {
+    grid-row-start: 2;
 }
 
-#p-head {
-    font-size: 18px;
+#announcements,
+#trending,
+#projects-section h2 {
+    padding: 15px 15px;
+    font-size: 30px;
+}
+
+#announce-content, #trending-content {
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgb(175, 165, 165);
+    margin: 0px 30px 0px 30px;
+    width: 80%;
+}
+
+#announce-content>#p-head {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-#p-body {
+#announce-content>#p-body {
     font-size: 16px;
     color: rgb(155, 144, 144);
     margin-top: 0;
@@ -155,13 +196,21 @@ body {
 }
 
 #trending {
-    grid-row-start: 2;
+    grid-row-start: 3;
+}
+
+#trending-content {
+    grid-row-start: 4;
+}
+
+#trending-containers {
+    height: 25%;
 }
 
 #trending-content p {
     display: inline-block;
     vertical-align: top;
-    margin-right:10px;
+    margin-left: 20px;
     font-size: 18px;
 }
 
